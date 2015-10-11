@@ -596,8 +596,9 @@
 					url: datasourcepath,
 					contentType: "application/json; charset=utf-8"
 				}).done(function (root) {
-					viewModel.datasources = root.datasources;
 
+					viewModel.datasources = root.datasources;
+                    
 					for (i = 0; i < root.datasources.length; i++) {
 						$('#dropdown-datasources').append('<li onclick="setDatasource(' + i + ');">' + root.datasources[i].name + '</li>');
 					}
